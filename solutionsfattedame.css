@@ -116,12 +116,7 @@ in tot tempo, quindi transition */
 }
 
 /* esercizio 10 */
-far rotare su se stessa l'icona
-
-.ex-10-icon {
-  animation:
-
-}
+/* far rotare su se stessa l'icona */
 
 .ex-10-icon {
   animation-name: spin;
@@ -145,3 +140,39 @@ far rotare su se stessa l'icona
     transform:rotate(360deg);
   }
 }
+
+/* esercizio 11 */
+/* far rotare su se stessa l'icona in senso orario con hover da 0 a 315 gradi e poi da 315 a 0 in senso antiorario*/
+
+/* mi serve usare "multiple steps - css-tricks" */
+
+.ex-11-icon:hover {
+  animation-name: spin2;
+  /* nome della mia animazione */
+  animation-duration: 2s;
+  /* durata per fare un'animation completa */
+
+  animation-timing-function: linear;
+  /* in questo modo non ci sono pause tra le animazioni */
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  80% {
+    transform: rotate(315deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+  /* le percentuali sono riferite alla durata dell'animazione */
+
+}
+
+
+
+/* ESERCIZIO 12 */
