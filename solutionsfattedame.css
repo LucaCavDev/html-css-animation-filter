@@ -1,0 +1,147 @@
+/* esercizio 1 */
+/* si deve colorare il div di rosso in pochi secondi quando vado sul div senza cliccare*/
+.ex-1-square:hover {
+  background-color: red;
+}
+
+/* transition serve per far fare qualcosa in un certo periodo di tempo */
+.ex-1-square {
+  transition: 3s;
+}
+
+
+/* esercizio 2 */
+/* cliccando e tenendo premuto il mouse in un certo periodo di tempo il div rosso prende tutta la larghezza del div contenitore div.well */
+/* applico active e width per fare in modo che quando clicco prenda il 100% dello spazio del div di classe well */
+
+.ex-2-square:active {
+  width: 100%;
+}
+
+/* do il transition per creare l'effetto delay,quindi ci metterà 3 secondi per prendere la width intera */
+.ex-2-square {
+  transition: 3s;
+}
+
+
+/* esercizio3 */
+/* il quadrato diventa un cerchio, quindi gli modifico il border radius,
+quando vado sopra, quindi hover
+in tot tempo, quindi transition */
+
+
+.ex-3-square:hover {
+  border-radius: 50%;
+}
+
+.ex-3-square {
+  transition: 2s;
+}
+
+/* esercizio4 */
+
+/* div scompare (display none) quando vado sopra (hover)in tot tempo (transition) */
+.ex-4-square:hover {
+  /* display: none !important; */
+}
+/* ok display non funziona vado di trasparenza */
+
+.ex-4-square:hover {
+  filter: opacity(0);
+}
+
+.ex-4-square {
+  transition: 3s;
+}
+
+/* esercizio 5 */
+/* +grande con hover + piccolo con click */
+
+.ex-5-square {
+  transition: 3s;
+}
+/* modificare width ed height non funziona */
+.ex-5-square:hover {
+  /* height: 100%; */
+  transform: scale(2);
+}
+
+/* uso transform: scale(); */
+
+.ex-5-square:active {
+  transform: scale(0.5);
+}
+
+/* esercizio 6 */
+/* immagine diventa senza delay in biano e nero quando vado in hover */
+
+.ex-6-img:hover {
+
+  filter: grayscale(100%);
+}
+
+/* esercizio 7 */
+/* c'è il delay */
+.ex-7-img {
+  transition: 3s;
+}
+
+.ex-7-img:hover {
+  filter: grayscale(50%);
+  filter: sepia(50%); /* diventa giallino */
+}
+
+/* esercizio 8 */
+/* c'è il delay */
+.ex-8-img {
+  transition: 3s;
+}
+
+
+.ex-8-img:hover {
+  border-radius: 5%;
+  filter: sepia(50%) grayscale(50%);
+}
+
+/* esercizio 9 */
+
+.ex-9-img {
+  transition: 3s;
+}
+
+.ex-9-img:hover {
+  border-radius: 5%;
+  filter: sepia(50%) grayscale(50%);
+  transform: scale(1.5)
+}
+
+/* esercizio 10 */
+far rotare su se stessa l'icona
+
+.ex-10-icon {
+  animation:
+
+}
+
+.ex-10-icon {
+  animation-name: spin;
+  /* nome della mia animazione */
+  animation-duration: 1s;
+  /* durata per fare un'animation completa */
+  animation-iteration-count: infinite;
+  /* quante volte la fa */
+  animation-timing-function: linear;
+  /* in questo modo non ci sono pause tra le animazioni */
+  animation-direction: reverse;
+  /* mi serve mettere il reverse perche senza il suo senso naturale sarebbe orario, a noi serve antiorario */
+
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
