@@ -176,3 +176,159 @@ in tot tempo, quindi transition */
 
 
 /* ESERCIZIO 12 */
+/* quando vado col mouse (hover) su button il div topwhite si sposta da sinistra a destra e ritorna,  mentre il div bottomwhite si sposta da destra a sinistra e ritorno */
+
+.ex-12-button:hover .ex-12-top-white {
+  animation-name:  top-white-12;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+
+}
+
+/* https://learn.shayhowe.com/advanced-html-css/transitions-animations/   qua ci sono ottimi spunti*/
+
+/* @keyframes top-white {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+
+i div white sono lunghi 60
+
+*/
+/* @keyframes top-white-12 {
+  0% {
+    left: calc(0% + 20px);
+  }
+  50% {
+    left: calc(100% - 60px);
+  }
+  100% {
+    left: calc(0% + 20px);
+  }
+} */
+
+@keyframes top-white-12 {
+  0% {
+    left: calc(0% + 10%);
+  }
+  50% {
+    left: calc(100% - 30%);
+  }
+  100% {
+    left: calc(0% + 10%);
+  }
+}
+/* mi funziona sia con percentuali che pixel nel calc */
+
+
+.ex-12-button:hover .ex-12-bottom-white {
+  animation-name:  bottom-white-12;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes bottom-white-12 {
+  0% {
+    right: calc(0% + 40px);
+  }
+  50% {
+    right: calc(100% - 60px);
+  }
+  100% {
+    right: calc(0% + 40px);
+  }
+}
+
+
+/* esercizio 13 */
+
+/* debug */
+/* .ex-13-top-white {
+  background-color: red !important;
+}
+
+.ex-13-bottom-white {
+  background-color: blue !important;
+} */
+
+/* fine debug */
+
+.ex-13-button:hover .ex-13-top-white {
+  animation-name:  top-white-13;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+  animation-name:  bottom-white-13;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+/* https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
+@keyframes top-white-13 {
+  0% {
+    left: calc(0% + 10%);
+    top: calc(0% - 15%);
+  }
+
+  20% {
+    left: calc(100% - 15%);
+    top: calc(0% - 15%);
+  }
+  40% {
+    left: calc(100% - 15%);
+    top: calc(0% + 90%);
+  }
+  60% {
+    left: calc(0% - 10%);
+    top: calc(0% + 90%);
+  }
+  80% {
+    left: calc(0% - 10%);
+    top: calc(0% - 15%);
+  }
+
+  100% {
+    left: calc(0% + 10%);
+    top: calc(0% - 15%);
+  }
+}
+
+@keyframes bottom-white-13 {
+  0% {
+    right: calc(0% + 20%);
+    top: calc(100% - 15%);
+  }
+
+  20% {
+    right: calc(100% - 20%);
+    top: calc(100% - 15%);
+  }
+  40% {
+    right: calc(100% - 20%);
+    top: calc(0% - 20%);
+  }
+  60% {
+    right: calc(0% - 20%);
+    top: calc(0% - 20%);
+  }
+  80% {
+    right: calc(0% - 20%);
+    top: calc(100% - 15%);
+  }
+
+  100% {
+    right: calc(0% + 20%);
+    top: calc(100% - 15%);
+  }
+}
